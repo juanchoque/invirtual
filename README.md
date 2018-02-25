@@ -1,18 +1,2 @@
-# README #
-Pasos para compilar la app
-
-### What is this repository for? ###
-
-* App para manejar una inmobiliaria virtual
-* Version 0.1 
-
-### How do I get set up? ###
-
-* Android Estudio
-* obtener key google 
-* Database configuration
- 
-### Who do I talk to? ###
-
-contact 1: nquispe@gmail.com
-contact 2: juan.choque1206@gmail.com
+App invirtual (inmobiliaria Virtual) lista avisos(inmobiliarios) publicados por distintos usuarios(notifica si la app no esta activa), permite publicar aviso de alquiler, venta, anticretico de casas, departamentos, lotes, tiendas.
+Tambien visualiza los avisos con ubicacion geografica y permite llamar a usuario que realizo la publicacion.
