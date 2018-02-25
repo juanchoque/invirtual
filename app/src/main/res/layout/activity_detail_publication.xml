@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.ucb.appin.views.activity.DetailPublicationView">
+
+    <ScrollView
+        android:id="@+id/detail_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/adetail_avisos_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextLabelView"
+                android:text="@string/prompt_descripcion_d" />
+
+            <TextView
+                android:id="@+id/txt_detail_descripcion"
+                style="@style/TextView"
+                android:text=" detalle descripcion" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_precio_d" />
+
+                <TextView
+                    android:id="@+id/txt_detail_precio"
+                    style="@style/TextView"
+                    android:text="100000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_telefono_d"/>
+                <TextView
+                    android:id="@+id/txt_detail_telefono"
+                    style="@style/TextView"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_detail_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_detail_llamar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_direccion_d"/>
+
+                <TextView
+                    android:id="@+id/txt_detail_direccion"
+                    style="@style/TextView"
+                    android:text="Av. Peru #356" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_tipo_d"/>
+                <TextView
+                    android:id="@+id/txt_detail_tipo"
+                    style="@style/TextView"
+                    android:text="Tipo" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_transaccion_d"/>
+                <TextView
+                    android:id="@+id/txt_detail_transaction"
+                    style="@style/TextView"
+                    android:text="Venta" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_ubicacion"/>
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_detail_ubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextLabelView"
+                    android:text="@string/prompt_foto" />
+
+                <ImageView
+                    android:id="@+id/img_detail_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

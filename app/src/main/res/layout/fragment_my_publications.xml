@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ucb.appin.views.fragment.MyPublicationsView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/list_my_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lin_my_publications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spi_l_tipo"
+                    android:layout_height="match_parent"
+                    android:layout_width="1dp"
+                    android:foreground="@color/colorPrimary"
+                    android:popupBackground="@color/colorPrimaryDark"
+                    android:layout_weight=".50">
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/spi_l_transaccion"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:foreground="@color/colorPrimary"
+                    android:popupBackground="@color/colorPrimaryDark"
+                    android:layout_weight=".50">
+                </Spinner>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/l_my_publications"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

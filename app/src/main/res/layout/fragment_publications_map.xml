@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ucb.appin.views.fragment.PublicationsMapView">
+
+    <LinearLayout
+        android:id="@+id/lin_my_publications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spi_lallm_tipo"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:foreground="@color/colorPrimary"
+                android:popupBackground="@color/colorPrimaryDark"
+                android:layout_weight=".50">
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spi_lallm_transaccion"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:foreground="@color/colorPrimary"
+                android:popupBackground="@color/colorPrimaryDark"
+                android:layout_weight=".50">
+            </Spinner>
+
+        </LinearLayout>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/content_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>
