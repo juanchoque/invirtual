@@ -564,7 +564,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("estado", ConstInVirtual.ACTIVE)
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else if(tipoAviso != null && transaccionAviso == null){
@@ -573,7 +573,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("estado", ConstInVirtual.ACTIVE)
                                 .and()
                                 .equalTo("tipoaviso", tipoAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else if(tipoAviso != null && transaccionAviso != null){
@@ -582,7 +582,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("estado", ConstInVirtual.ACTIVE)
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                     else if(!tipoAviso.getNombre().equals("Todos") && !transaccionAviso.getNombre().equals("Todos")){
                         avisos = realm.where(Aviso.class)
@@ -591,20 +591,20 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("tipoaviso", tipoAviso.getId())
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                     else if((!tipoAviso.getNombre().equals("Todos") && transaccionAviso.getNombre().equals("Todos"))){
                         avisos = realm.where(Aviso.class)
                                 .equalTo("estado", ConstInVirtual.ACTIVE)
                                 .and()
                                 .equalTo("tipoaviso", tipoAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else{
                     avisos = realm.where(Aviso.class)
                             .equalTo("estado", ConstInVirtual.ACTIVE)
-                            .findAll();
+                            .findAllSorted("id", Sort.DESCENDING);
                 }
 
                 List<Aviso>rListAvisos = new ArrayList<Aviso>();
@@ -660,7 +660,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("cuenta", cuenta.getId())
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else if(tipoAviso != null && transaccionAviso == null){
@@ -671,7 +671,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("cuenta", cuenta.getId())
                                 .and()
                                 .equalTo("tipoaviso", tipoAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else if(tipoAviso != null && transaccionAviso != null){
@@ -682,7 +682,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("cuenta", cuenta.getId())
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                     else if(!tipoAviso.getNombre().equals("Todos") && !transaccionAviso.getNombre().equals("Todos")){
                         avisos = realm.where(Aviso.class)
@@ -693,7 +693,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("tipoaviso", tipoAviso.getId())
                                 .and()
                                 .equalTo("transaccionaviso", transaccionAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                     else if((!tipoAviso.getNombre().equals("Todos") && transaccionAviso.getNombre().equals("Todos"))){
                         avisos = realm.where(Aviso.class)
@@ -702,7 +702,7 @@ public class AvisoManager implements IAvisoManager {
                                 .equalTo("cuenta", cuenta.getId())
                                 .and()
                                 .equalTo("tipoaviso", tipoAviso.getId())
-                                .findAll();
+                                .findAllSorted("id", Sort.DESCENDING);
                     }
                 }
                 else{
@@ -710,7 +710,7 @@ public class AvisoManager implements IAvisoManager {
                             .equalTo("estado", ConstInVirtual.ACTIVE)
                             .and()
                             .equalTo("cuenta", cuenta.getId())
-                            .findAll();
+                            .findAllSorted("id", Sort.DESCENDING);
                 }
 
                 List<Aviso>rListAvisos = new ArrayList<Aviso>();
